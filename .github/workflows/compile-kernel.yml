@@ -105,7 +105,7 @@ jobs:
           kernel_toolchain: ${{ inputs.kernel_toolchain }}
 
       - name: Upload Kernel to Release
-        uses: actions/upload-artifact@main
+        uses: gdlionking/amlogic-s9xxx-armbian@main
         if: ${{ env.PACKAGED_STATUS }} == 'success' && !cancelled()
         with:
           tag: kernel_stable
